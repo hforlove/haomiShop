@@ -1,0 +1,12 @@
+@import 'styles/iconfont.wxss';
+
+
+view,text,rice-text,swiper,swiper-item,navigator{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+page{
+  background: #f9f9f9;
+}

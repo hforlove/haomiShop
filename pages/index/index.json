@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Goods":"../../components/Goods/Goods"
+  },
+  "navigationStyle": "custom"
 }

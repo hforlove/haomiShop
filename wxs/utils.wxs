@@ -1,0 +1,11 @@
+var getImg=function(src) {
+  if (!src) return
+  if (src.indexOf('localhost') >= 0) {
+    return src.replace('http://localhost:28089', 'http://47.99.134.126:28019')
+  }
+  return src.indexOf('http') >= 0 ? src : 'http://47.99.134.126:28019' + src
+}
+
+module.exports={
+  getImg:getImg
+}

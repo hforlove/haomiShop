@@ -1,1 +1,43 @@
-<view>index</view>
+<wxs module="utils" src="../../wxs/utils.wxs"></wxs>
+
+<view class="search_bar" style="padding-top:{{statusBarTop}}px">
+  <view class="inner" style="height:{{statusBarHeight}}px;">
+    <view class="iconfont icon-sousuo"></view>
+    <view class="input" style="border-radius:{{statusBarHeight/2}}px">搜索商品</view>
+  </view>
+</view>
+
+<view style="padding-top:{{statusBarTop+statusBarHeight+10}}px">
+  <view class="home_swiper">
+    <swiper autoplay indicator-dots circular>
+        <swiper-item wx:for="{{carousels}}" wx:key="index">
+          <image src="{{utils.getImg(item.carouselUrl)}}" mode="widthFix" />
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="home_nav">
+    <view wx:for="{{navList}}" wx:key="id">
+      <image src="../../images/nav/{{item.id}}.png"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+
+  <view class="home_goods">
+    <view class="block">
+      <view class="title">新品</view>
+      <view class="list">
+        <view class="list_item" wx:for="{{newGoodses}}" wx:key="goodsId">
+          <Goods
+            id="{{item.goodsId}}"
+            src="{{item.goodsCoverImg}}"
+            title="{{item.goodsName}}"
+            price="{{item.sellingPrice}}"
+          >
+        </Goods>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
