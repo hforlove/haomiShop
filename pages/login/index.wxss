@@ -1,1 +1,17 @@
-/* pages/login/index.wxss */
+.login_cont {
+  padding: 40rpx;
+}
+.login_cont .btn {
+  padding-top: 20rpx;
+}
+.login_cont .btn text {
+  margin-left: 30rpx;
+  color: #1989fa;
+}
+.login_cont .btn button {
+  margin-top: 10rpx;
+  width: 100%;
+}
+page {
+  background: #fff;
+}

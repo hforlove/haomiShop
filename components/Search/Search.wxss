@@ -1,0 +1,24 @@
+.search {
+  display: flex;
+  position: relative;
+  height: 92rpx;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 20rpx;
+}
+.search .iconfont {
+  position: absolute;
+  left: 40rpx;
+}
+.search .input {
+  height: 100%;
+  background: #fafafa;
+  border-radius: 8rpx;
+  padding-left: 80rpx;
+  flex: 1;
+}
+.search .btn {
+  width: 80rpx;
+  margin-left: 40rpx;
+}

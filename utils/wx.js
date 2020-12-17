@@ -1,5 +1,30 @@
-export const showToast=(title)=>{
+export const showToast = (title) => {
   wx.showToast({
-    title,
+    title
+  })
+}
+
+export const setStorage = (key, data) => {
+  wx.setStorageSync(key, data)
+}
+
+export const getStorage = (key) => {
+  return wx.getStorageSync(key)
+}
+
+export const switchTab=(url)=>{
+  wx.switchTab({
+    url
+  })
+}
+
+export const redirectTo=(url)=>{
+  wx.redirectTo({
+    url,
+    success: (res) => {},
+    fail: (res) => {},
+    complete: (res) => {
+      console.log(res);
+    },
   })
 }

@@ -1,2 +1,16 @@
-<!--pages/goods/index.wxml-->
-<text>pages/goods/index.wxml</text>
+<wxs module="utils" src="../../wxs/utils.wxs"></wxs>
+
+<view class="goods_search">
+  <Search bindonSearch="onSearch"></Search>
+</view>
+
+<view class="goods_list">
+  <navigator class="goods" wx:for="{{goodsList}}" wx:key="goodsId">
+    <view class="img"><image src="{{utils.getImg(item.goodsCoverImg)}}" /></view>
+    <view class="cont">
+      <view class="title">{{item.goodsName}}</view>
+      <view class="info">{{item.goodsIntro}}</view>
+      <view class="price">￥{{item.sellingPrice}}</view>
+    </view>
+  </navigator>
+</view>

@@ -8,22 +8,21 @@
 }
 .search_bar .inner {
   display: flex;
-  padding-left: 16px;
   position: relative;
+  align-items: center;
 }
 .search_bar .input {
   border: 1rpx solid #ccc;
   height: 100%;
   padding-left: 60px;
-  width: 300rpx;
+  width: 400rpx;
   display: flex;
   align-items: center;
   color: #ccc;
 }
 .search_bar .iconfont {
-  position: absolute;
-  left: 40px;
-  top: 8px;
+  position: relative;
+  left: 60rpx;
 }
 .home_swiper {
   padding-top: 16rpx;

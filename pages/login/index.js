@@ -1,66 +1,59 @@
 // pages/login/index.js
+const md5 = require('../../utils/md5.min.js')
+
+import { login, register } from '../../api/index.js'
+import { setStorage, getStorage, switchTab, showToast } from '../../utils/wx.js'
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    formData: {
+      loginName:'',
+      password:''
+    },
+    type:true,
+    rules: [
+      {
+        name: 'loginName',
+        rules: {required: true, message: '用户名必填'},
+      },
+      {
+          name: 'password',
+          rules: {required: true, message: '密码必填'},
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  changeType(){
+    this.setData({
+      type:!this.data.type
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  inputChange(e){
+    const {field}=e.currentTarget.dataset
+    this.setData({
+      [`formData.${field}`]:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onSubmit(){
+    this.selectComponent('#form').validate(valid=> {
+      if(valid){
+        if(this.data.type){
+          const params = {
+            loginName: this.data.formData.loginName,
+            passwordMd5: md5(this.data.formData.password)
+          }
+          login(params).then(res=>{
+            setStorage('token',res.data)
+            switchTab('../index/index')
+          })
+        }else{
+          register(this.data.formData).then(res=>{
+            showToast('注册成功')
+            this.setData({
+              type:true
+            })
+          })
+        }
+      }
+    })
   }
 })

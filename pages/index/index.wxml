@@ -30,7 +30,35 @@
         <view class="list_item" wx:for="{{newGoodses}}" wx:key="goodsId">
           <Goods
             id="{{item.goodsId}}"
-            src="{{item.goodsCoverImg}}"
+            src="{{utils.getImg(item.goodsCoverImg)}}"
+            title="{{item.goodsName}}"
+            price="{{item.sellingPrice}}"
+          >
+        </Goods>
+        </view>
+      </view>
+    </view>
+    <view class="block">
+      <view class="title">热门</view>
+      <view class="list">
+        <view class="list_item" wx:for="{{hotGoodses}}" wx:key="goodsId">
+          <Goods
+            id="{{item.goodsId}}"
+            src="{{utils.getImg(item.goodsCoverImg)}}"
+            title="{{item.goodsName}}"
+            price="{{item.sellingPrice}}"
+          >
+        </Goods>
+        </view>
+      </view>
+    </view>
+    <view class="block">
+      <view class="title">推荐</view>
+      <view class="list">
+        <view class="list_item" wx:for="{{recommendGoodses}}" wx:key="goodsId">
+          <Goods
+            id="{{item.goodsId}}"
+            src="{{utils.getImg(item.goodsCoverImg)}}"
             title="{{item.goodsName}}"
             price="{{item.sellingPrice}}"
           >

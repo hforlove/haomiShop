@@ -31,27 +31,27 @@ export function updateUserInfo (data) {
   })
 }
 
-export function getHomeData (params) {
+export function getHomeData (data) {
   return request({
     method: 'get',
     url: '/index-infos',
-    params
+    data
   })
 }
 
-export function getCateGory (params) {
+export function getCateGory (data) {
   return request({
     method: 'get',
     url: '/categories',
-    params
+    data
   })
 }
 
-export function getGoodsList (params) {
+export function getGoodsList (data) {
   return request({
     method: 'get',
     url: '/search',
-    params
+    data
   })
 }
 
@@ -69,11 +69,11 @@ export function getCartList () {
   })
 }
 
-export function getCartByIds (params) {
+export function getCartByIds (data) {
   return request({
     method: 'get',
     url: '/shop-cart/settle',
-    params
+    data
   })
 }
 
@@ -144,11 +144,11 @@ export function getAddressDetail (id) {
   })
 }
 
-export function getOrder (params) {
+export function getOrder (data) {
   return request({
     method: 'get',
     url: '/order',
-    params
+    data
   })
 }
 
@@ -174,10 +174,10 @@ export function createOrder (data) {
   })
 }
 
-export function payOrder (params) {
+export function payOrder (data) {
   return request({
     method: 'get',
     url: '/paySuccess',
-    params
+    data
   })
 }

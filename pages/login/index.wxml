@@ -1,2 +1,14 @@
-<!--pages/login/index.wxml-->
-<text>pages/login/index.wxml</text>
+<view class="login_cont">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cell show-error prop="loginName" title="用户名">
+            <input data-field="loginName" class="weui-input" bindinput="inputChange"/>
+        </mp-cell>
+        <mp-cell show-error prop="password" title="密码">
+            <input type="password" data-field="password" bindinput="inputChange"/>
+        </mp-cell>
+    </mp-form>
+    <view class="btn">
+        <text bindtap="changeType">{{type?'立即注册':'立即登陆'}}</text>
+        <button type="primary" bindtap="onSubmit">{{type?'登陆':'注册'}}</button>
+    </view>
+</view>

@@ -1,4 +1,5 @@
 import { getHomeData } from '../../api/index.js'
+import { home } from '../../mock/home.js'
 
 Page({
   data: {
@@ -34,6 +35,11 @@ Page({
   getHomeData(){
     getHomeData().then(res=>{
       const {carousels, hotGoodses, newGoodses, recommendGoodses} = res.data
+      this.setData({
+        carousels, hotGoodses, newGoodses, recommendGoodses
+      })
+    }).catch(err=>{
+      const {carousels, hotGoodses, newGoodses, recommendGoodses} = home.data
       this.setData({
         carousels, hotGoodses, newGoodses, recommendGoodses
       })

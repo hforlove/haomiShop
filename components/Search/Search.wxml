@@ -1,0 +1,5 @@
+<view class="search">
+  <view class="iconfont icon-sousuo"></view>
+  <input class="input" type="text" placeholder="输入商品名称" bindinput="onInput" />
+  <view class="btn" bindtap="onSearch">搜索</view>
+</view>

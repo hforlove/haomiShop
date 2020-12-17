@@ -16,6 +16,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   margin: 8rpx 0;
+  height: 84rpx;
 }
 .goods text {
   color: #ff5500;
