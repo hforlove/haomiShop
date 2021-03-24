@@ -5,6 +5,10 @@ Component({
       type: String,
       default: ''
     },
+    gid:{
+      type: Number,
+      default: 0
+    },
     title:{
       type: String,
       default: ''

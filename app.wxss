@@ -10,3 +10,7 @@ view,text,rice-text,swiper,swiper-item,navigator{
 page{
   background: #f9f9f9;
 }
+
+.price{
+  color: #e93b3d;
+}

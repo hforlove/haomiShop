@@ -4,6 +4,10 @@ export const showToast = (title) => {
   })
 }
 
+export const removeStorage = (key) => {
+  wx.removeStorageSync(key)
+}
+
 export const setStorage = (key, data) => {
   wx.setStorageSync(key, data)
 }

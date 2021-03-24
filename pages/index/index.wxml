@@ -29,7 +29,7 @@
       <view class="list">
         <view class="list_item" wx:for="{{newGoodses}}" wx:key="goodsId">
           <Goods
-            id="{{item.goodsId}}"
+            gid="{{item.goodsId}}"
             src="{{utils.getImg(item.goodsCoverImg)}}"
             title="{{item.goodsName}}"
             price="{{item.sellingPrice}}"
@@ -43,7 +43,7 @@
       <view class="list">
         <view class="list_item" wx:for="{{hotGoodses}}" wx:key="goodsId">
           <Goods
-            id="{{item.goodsId}}"
+            gid="{{item.goodsId}}"
             src="{{utils.getImg(item.goodsCoverImg)}}"
             title="{{item.goodsName}}"
             price="{{item.sellingPrice}}"
@@ -57,7 +57,7 @@
       <view class="list">
         <view class="list_item" wx:for="{{recommendGoodses}}" wx:key="goodsId">
           <Goods
-            id="{{item.goodsId}}"
+            gid="{{item.goodsId}}"
             src="{{utils.getImg(item.goodsCoverImg)}}"
             title="{{item.goodsName}}"
             price="{{item.sellingPrice}}"

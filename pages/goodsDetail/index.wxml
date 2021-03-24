@@ -1,2 +1,37 @@
-<!--pages/goodsDetail/index.wxml-->
-<text>pages/goodsDetail/index.wxml</text>
+<wxs module="utils" src="../../wxs/utils.wxs"></wxs>
+
+<swiper class="detail_swiper">
+  <swiper-item
+    wx:for="{{images}}"  
+    wx:key="item"
+  >
+    <image src="{{utils.getImg(item)}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="detail_info">
+  <view class="title">{{goods.goodsName}}</view>
+  <view class="info">{{goods.goodsIntro}}</view>
+  <view class="price">￥{{goods.sellingPrice}}</view>
+</view>
+
+<view class="detail_cont">
+  <rich-text nodes="{{goods.goodsDetailContent}}"></rich-text>
+</view>
+
+<view class="detail_action">
+  <view class="l">
+    <view class="iconfont icon-liuyan"></view>
+    <text>客服</text>
+  </view>
+  <navigator class="l" open-type="switchTab" url="/pages/cart/index">
+    <view class="iconfont icon-gouwuche"></view>
+    <text>购物车</text>
+  </navigator>
+  <view class="r">
+    <button class="join">加入购物车</button>
+  </view>
+  <view class="r">
+    <button class="buy">立即购买</button>
+  </view>
+</view>

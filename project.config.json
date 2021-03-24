@@ -82,6 +82,19 @@
         {
           "name": "商品列表",
           "pathName": "pages/goods/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/goodsDetail/index",
+          "query": "id=10909",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/cart/index",
+          "query": "id=10909",
           "scene": null
         }
       ]

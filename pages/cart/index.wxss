@@ -1,1 +1,90 @@
-/* pages/cart/index.wxss */
+.cart_item {
+  display: flex;
+  padding: 20rpx 32rpx;
+  position: relative;
+  background: #fff;
+}
+.cart_item .left {
+  width: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_item .middle {
+  width: 176rpx;
+}
+.cart_item .middle image {
+  width: 176rpx;
+  height: 176rpx;
+}
+.cart_item .right {
+  flex: 1;
+  overflow: hidden;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+}
+.cart_item .right .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 80rpx;
+}
+.cart_item .actions {
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  display: flex;
+  width: 184rpx;
+  justify-content: space-between;
+}
+.cart_item .actions view,
+.cart_item .actions input {
+  width: 56rpx !important;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  background: #f7f8fa;
+}
+.cart_item .actions view {
+  border-radius: 4rpx;
+}
+.cart_item .actions input {
+  font-size: 28rpx;
+}
+.cart_action {
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  z-index: 999;
+  background: #fff;
+  padding: 10rpx;
+  justify-content: space-between;
+}
+.cart_action .left {
+  display: flex;
+  align-items: center;
+}
+.cart_action .right {
+  height: 100%;
+  overflow: hidden;
+}
+.cart_action .right view {
+  float: right;
+}
+.cart_action .right button {
+  height: 100%;
+  width: 200rpx;
+  background: linear-gradient(to right, #ff6034, #ee0a24);
+  color: #fff;
+  font-weight: normal;
+  border-radius: 40rpx;
+}
+.cart_action .right .l {
+  height: 100%;
+  margin-right: 20rpx;
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 
-<navigator class="goods">
+<navigator class="goods" url="/pages/goodsDetail/index?id={{gid}}">
   <image mode="widthFix" src="{{src}}"></image>
   <view>{{title}}</view>
   <text>￥{{price}}</text>

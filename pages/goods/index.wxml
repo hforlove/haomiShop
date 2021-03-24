@@ -5,7 +5,12 @@
 </view>
 
 <view class="goods_list">
-  <navigator class="goods" wx:for="{{goodsList}}" wx:key="goodsId">
+  <navigator
+    class="goods"
+    wx:for="{{goodsList}}"
+    wx:key="goodsId"
+    url="/pages/goodsDetail/index?id={{item.goodsId}}"
+  >
     <view class="img"><image src="{{utils.getImg(item.goodsCoverImg)}}" /></view>
     <view class="cont">
       <view class="title">{{item.goodsName}}</view>

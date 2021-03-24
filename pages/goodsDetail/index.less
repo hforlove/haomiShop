@@ -1,0 +1,73 @@
+.detail_swiper{
+  height: 750rpx;
+  image{
+    width:750rpx;
+    height: 750rpx;
+  }
+}
+.detail_info{
+  background: #fff;
+  padding:20rpx;
+  .title{
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+  .info{
+    color: #666;
+    font-size: 24rpx;
+    padding: 10rpx 0;
+  }
+  .price{
+    color: #e93b3d;
+    font-size: 32rpx;
+  }
+}
+.detail_cont{
+  padding: 20rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  padding-bottom: 120rpx;
+}
+
+.detail_action{
+  background: #fff;
+  z-index: 999;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 8rpx;
+  .iconfont{
+    font-size: 36rpx;
+  }
+  .l{
+    width: 96rpx;
+    text-align: center;
+    text{
+      margin-top: -12rpx;
+      display: block;
+      font-size: 28rpx;
+    }
+  }
+  .r{
+    flex:1;
+    padding:8rpx 0;
+    button{
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 32rpx;
+      font-weight: normal;
+    }
+    .join{
+      background: linear-gradient(to right,#ffd01e,#ff8917);
+      border-radius: 42rpx 0 0 42rpx;
+    }
+    .buy{
+      background: linear-gradient(to right,#ff6034,#ee0a24);
+      border-radius: 0 42rpx 42rpx 0;
+    }
+  }
+}

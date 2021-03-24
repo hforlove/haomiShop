@@ -1,2 +1,42 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+
+<wxs module="utils" src="../../wxs/utils.wxs"></wxs>
+
+<view class="cart">
+  <mp-slideview
+    buttons="{{slideButtons}}"
+    wx:for="{{cartList}}"
+    wx:key="goodsId"
+  >
+    <view class="cart_item">
+      <view class="left">
+        <checkbox checked="{{item.check}}"></checkbox>
+      </view>
+      <view class="middle">
+        <image src="{{utils.getImg(item.goodsCoverImg)}}"></image>
+      </view>
+      <view class="right">
+        <view class="title">{{item.goodsName}}</view>
+        <view class="price">￥{{item.sellingPrice}}</view>
+      </view>
+      <view class="actions">
+        <view>-</view>
+        <input type="number" value="{{item.goodsCount}}" />
+        <view>+</view>
+      </view>
+    </view>
+  </mp-slideview>
+</view>
+
+<view class="cart_action">
+  <view class="left">
+    <checkbox></checkbox>全选
+  </view>
+  <view class="right">
+    <view class="r">
+      <button>结算</button>
+    </view>
+    <view class="l">
+      合计：<text class="price">￥10000</text>
+    </view>
+  </view>
+</view>
